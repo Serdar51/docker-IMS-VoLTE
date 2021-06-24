@@ -14,15 +14,15 @@ services:
     networks:
       net1.test:
 
-#  kamailio: 
-#    build: kamailio/
-#    depends_on:
-#      - db
-#    volumes:
-#      - ./kamailio/root:/root
-#      - ./kamailio/config:/usr/local/etc/kamailio
-#    hostname: kamailio
-
+  kamailio: 
+    build: kamailio/
+    depends_on:
+      - db
+    volumes:
+      - ./kamailio/root:/root
+      - ./kamailio/config:/usr/local/etc/kamailio
+    hostname: kamailio
+    
   pcscf:
     build: pcscf/
     depends_on:
